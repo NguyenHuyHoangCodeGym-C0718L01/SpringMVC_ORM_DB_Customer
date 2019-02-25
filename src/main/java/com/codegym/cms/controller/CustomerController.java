@@ -29,8 +29,8 @@ public class CustomerController {
 
     @PostMapping("/create-customer")
     public ModelAndView saveCustomer(@ModelAttribute("customer") Customer customer){
-        List<Customer> customers = customerService.findAll();
-        customer.setId(customers.get(customers.size()-1).getId()+1);
+//        List<Customer> customers = customerService.findAll();
+//        customer.setId(customers.get(customers.size()-1).getId()+1);
         customerService.save(customer);
 
         ModelAndView modelAndView = new ModelAndView("/customer/create");

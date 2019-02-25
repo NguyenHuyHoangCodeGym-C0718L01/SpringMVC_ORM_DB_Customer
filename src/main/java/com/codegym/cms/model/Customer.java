@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class Customer implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String firstName;
     private String lastName;
